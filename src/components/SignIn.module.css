@@ -1,0 +1,55 @@
+.formInput{
+    border: 1px solid #d2d1ce;
+    margin:8% 16%;
+    height: 70vh;
+    width: 70vw;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    box-shadow: 0 0 20px rgb(222, 219, 219);
+}
+.EmailId{
+    font-size: medium;
+    border-radius: 5px;
+    padding: 0.6% 1%;
+    margin-top: 10%;
+    margin-left:35%;
+    height: 5vh;
+    width: 20vw;
+    border: 2px solid #d2d1ce;
+    display: block;
+}
+.Password{
+    font-size: medium;
+    border-radius: 5px;
+    padding: 0.6% 1%;
+    margin-top: 4%;
+    margin-left:35%;
+    height: 5vh;
+    width: 20vw;
+    border: 2px solid #d2d1ce;
+    display: block;
+}
+.Submit{
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    font-size: medium;
+    border-radius: 5px;
+    padding: 0.6% 1%;
+    margin-top: 4%;
+    margin-left:35%;
+    height: 7vh;
+    width: 22vw;
+    border: 1px solid red;
+    display: block;
+}
+.Submit:hover{
+    background-color: green;
+    border: 2px solid green;
+}
+.PasswordForgotten{
+    margin-top: 3%;
+    margin-left:35%;
+}

@@ -1,6 +1,13 @@
 import React from "react";
 import ItemStyles from './Item.module.css'
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Routes,
+  BrowserRouter,
+} from "react-router-dom";
 
 const Item = (props) => {
   return (
@@ -20,9 +27,9 @@ const Item = (props) => {
           </div>
         </div>
 
-        <form action="/iphone">
-          <button type="submit" className={ItemStyles.ButtonStyle}>Bye now</button>
-        </form>
+        
+          <Link to="bye/device" className={ItemStyles.ButtonStyle}>Bye now</Link>
+        
       </div>
     
   );

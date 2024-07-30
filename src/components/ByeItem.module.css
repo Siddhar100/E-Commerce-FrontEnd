@@ -1,0 +1,40 @@
+.Card{
+    border: 1px solid #d2d1ce;
+    margin:6% 5%;
+    height: 84vh;
+    width: 90vw;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-shadow: 0 0 20px rgb(222, 219, 219);
+}
+
+.ItemImage{
+    
+    width: 30vw;
+}
+.ItemDetails{
+    
+    width: 60vw;
+}
+
+.ByeNow{
+    cursor: pointer;
+    border: 2px solid antiquewhite;
+    background-color: yellow;
+    border-radius: 5px;
+    margin-top: 10vh;
+    height: 5vh;
+    width: 50vw;
+    box-shadow: 0 0 2px rgb(84, 83, 83);
+}
+.ByeNow:hover{
+    color: white;
+    border: 2px solid red;
+    background-color: red;
+}
+
+hr{
+    width: 95%;
+}
