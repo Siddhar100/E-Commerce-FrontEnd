@@ -14,7 +14,6 @@
 
 .Option{
     background-color: #b9f0a0;
-    color: white;
     cursor: pointer;
     border: 4px solid #c0bfbd;
     margin: 3% 4%;
@@ -25,6 +24,7 @@
     display: flex;
     flex-direction: row;
 }
+
 .OptionImage{
     border-radius: 5px;
     color: white;
@@ -32,12 +32,12 @@
     border: 0px solid #d2d1ce;
     width: 40%;
 }
+
 .OptionInfo{
-    
-    border: 0px solid #d2d1ce;
-    
+    border: 0px solid #d2d1ce; 
     width: 60%;
 }
+
 .Option:hover{
     border: 5px solid rgb(99, 99, 225);
     background-color: red;

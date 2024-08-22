@@ -1,22 +1,22 @@
 import React from "react";
 import CardStyle from "./ByeItem.module.css";
+import IPhone from "../images/iphone.png";
 
-const ByeItem = () => {
+const ByeItem = (props) => {
   return (
     <div className={CardStyle.Card}>
       <div></div>
-      <div className={CardStyle.ItemImage}></div>
+      <div className={CardStyle.ItemImage}>
+        <img src={IPhone} />
+      </div>
       <div className={CardStyle.ItemDetails}>
         <div>
-          <h1>
-            Iphone 13C (Starshine Green, 4GB RAM, 128GB Storage) | Powered by 4G
-            MediaTek Helio G85 | 90Hz Display | 50MP AI Triple Camera
-          </h1>
+          <h1>{props.item_name}</h1>
           <br />
         </div>
         <hr />
         <div>
-          <h1> $51,000 </h1>
+          <h1> ${props.item_price} </h1>
           <p>
             M.R.P <strike>120000</strike>
           </p>
@@ -28,23 +28,40 @@ const ByeItem = () => {
         </div>
         <hr />
         <div>
-            <center>
+          <center>
             <ul type="none">
-                <li><h3>4GB RAM</h3></li><br/>
-                <li><h3>128GB Storage</h3></li><br/>
-                <li><h3>I5 Processer</h3></li><br/>
-                <li><h3>IPS Display</h3></li><br/>
-                <li><h3>Figerprint Senser</h3></li><br/>
+              <li>
+                <h3>4GB RAM</h3>
+              </li>
+              <br />
+              <li>
+                <h3>128GB Storage</h3>
+              </li>
+              <br />
+              <li>
+                <h3>I5 Processer</h3>
+              </li>
+              <br />
+              <li>
+                <h3>IPS Display</h3>
+              </li>
+              <br />
+              <li>
+                <h3>Figerprint Senser</h3>
+              </li>
+              <br />
             </ul>
-            </center>
+          </center>
         </div>
-        <hr/>
+        <hr />
         <div>
-            <center>
+          <center>
             <form>
-                <button type="submit" className={CardStyle.ByeNow}>Bye Now</button>
+              <button type="submit" className={CardStyle.ByeNow}>
+                Bye Now
+              </button>
             </form>
-            </center>
+          </center>
         </div>
       </div>
     </div>

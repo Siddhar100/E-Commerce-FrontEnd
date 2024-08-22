@@ -1,40 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Item from "./Item.js";
-import ItemsStyle from './Items.module.css'
+import ItemsStyle from "./Items.module.css";
+import axios from "axios";
 
 const Items = () => {
- const  allItems = [
-        {uri:'none',heading:'IPhone',description:'This is Iphone.',
-            price:'21000'
-        },
-        {uri:'none',heading:'IPad',description:'This is Ipad.',
-            price:'12000'
-        },
-        {uri:'none',heading:'AC',description:'This is Samsung Ac.',
-            price:'11000'
-        },
-        {uri:'none',heading:'Fridge',description:'This is Fridge',
-            price:'15000'
-        },
-        {uri:'none',heading:'Iphoe',description:'welcome',
-            price:'10000'
-        },
-        {uri:'none',heading:'Iphoe',description:'welcome',
-            price:'10000'
-        },
-        {uri:'none',heading:'Iphoe',description:'welcome',
-            price:'10000'
-        },
-        {uri:'none',heading:'Iphoe',description:'welcome',
-            price:'10000'
-        },
-    ]
+  const [userData, setData] = useState([]);
+  const getAllData = async () => {
+    const url = process.env.REACT_APP_URL;
+  await axios.get(`${url}/api/add/getItems`).then(
+      (res) => {
+        setData(res.data);
+        console.log(res.data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  };
+  useEffect(() => {
+    getAllData();
+  }, []);
+
   return (
     <div className={ItemsStyle.ItemStyle}>
-      {allItems.map((item, index) => {
-          return <Item key={item.index} uri ={item.heading} />;
-        })}
-      
+      {userData.length > 0
+        ? userData.map((data, index) => {
+            return (
+              <Item
+                key={index}
+                name={data.item}
+                price={data.price}
+                description={data.description}
+              />
+            );
+          })
+        : "No Courses"}
     </div>
   );
 };

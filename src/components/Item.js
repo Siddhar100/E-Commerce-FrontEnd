@@ -1,5 +1,6 @@
 import React from "react";
-import ItemStyles from './Item.module.css'
+import ItemStyles from "./Item.module.css";
+import IPhone from "../images/iphone.png";
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,30 +9,33 @@ import {
   Routes,
   BrowserRouter,
 } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Item = (props) => {
+  const nevigate = useNavigate();
+  const itemPage = () =>{
+    nevigate('/bye',{state:{item_name:props.name,item_price:props.price}});
+  }
   return (
-    
-      <div className={ItemStyles.itemStyle}>
-        <img src="" alt="sorry" height="300vh" width="300vw" />
-        <hr />
-        <h2 > &nbsp;{props.uri} </h2>
-        <p className={ItemStyles.titleStyle}> similique ab, atque sint assumenda! Mollitia quam sequi corporis
-          aliquid ut? Neque dolorem exercitationem .
-        </p>
-        <hr />
-        <div >
-          &nbsp; <p className={ItemStyles.priceStyle}>$ 51,000</p>
-          <div>
-            &nbsp; MRP <strike>$1000000</strike>
-          </div>
+    <div className={ItemStyles.itemStyle}>
+      <img src={IPhone} alt="sorry" height="300vh" width="300vw" />
+      <hr />
+      <h2> &nbsp;{props.name} </h2>
+      <p className={ItemStyles.titleStyle}>
+        {" "}
+        {props.description}
+      </p>
+      <hr />
+      <div>
+        &nbsp; <p className={ItemStyles.priceStyle}>$ {props.price}</p>
+        <div>
+          &nbsp; MRP <strike>51000</strike>
         </div>
-
-        
-          <Link to="bye/device" className={ItemStyles.ButtonStyle}>Bye now</Link>
-        
       </div>
-    
+      <form onSubmit={itemPage}>
+         <input type="submit" className={ItemStyles.ButtonStyle} value="Bye Now"/>
+      </form>
+    </div>
   );
 };
 

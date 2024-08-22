@@ -38,7 +38,7 @@ function App() {
             }
           />
           <Route
-            path="/bye/device"
+            path="/bye"
             element={
               <>
                 <NavBar />
