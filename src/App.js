@@ -13,6 +13,7 @@ import {
   Routes,
   BrowserRouter,
 } from "react-router-dom";
+import Oders from "./components/Oders.js";
 
 function App() {
   return (
@@ -52,6 +53,15 @@ function App() {
               <>
                 <NavBar />
                 <DashBoard />
+              </>
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <>
+                <NavBar />
+                <Oders/>
               </>
             }
           />

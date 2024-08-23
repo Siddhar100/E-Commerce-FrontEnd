@@ -6,7 +6,14 @@ import Payments from "../images/payment.png";
 import Support from "../images/contact.png";
 import LogOut from "../images/logout.jpg";
 import { useNavigate } from 'react-router-dom';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Routes,
+  BrowserRouter,
+} from "react-router-dom";
 const DashBoard = () => {
   const navigate = useNavigate();
   const logout = () =>{
@@ -23,7 +30,7 @@ const DashBoard = () => {
           <center>
             <h2>Orders</h2>
             <p>Orders product.</p>
-            <a href="#">Click Here</a>
+            <Link to="/orders">Click Here</Link>
           </center>
         </div>
       </div>

@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.BackGround{
+    border: 2px solid rgb(230, 229, 229);
+    border-radius: 5px;
+    height: 80vh;
+    width: 80vw;
+    margin: 15vh 10vw;
+    justify-content: center;
+    box-shadow: 0 0 20px rgb(189, 186, 186);
+    overflow-y: scroll;
+}

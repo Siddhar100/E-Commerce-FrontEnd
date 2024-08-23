@@ -10,7 +10,7 @@ const Items = () => {
   await axios.get(`${url}/api/add/getItems`).then(
       (res) => {
         setData(res.data);
-        console.log(res.data);
+        //console.log(res.data);
       },
       (error) => {
         console.log(error);
@@ -34,7 +34,7 @@ const Items = () => {
               />
             );
           })
-        : "No Courses"}
+        : "No Items!"}
     </div>
   );
 };
