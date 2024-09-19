@@ -8,7 +8,7 @@ In the project directory,available
 
 ### `npm start`
 
-
+This site is deployed on render.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
